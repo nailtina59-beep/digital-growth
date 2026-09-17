@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Growth | Digitalni marketing</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: rgba(5, 5, 5, 0.95);
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #999;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #bbb;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(circle at center, #202020 0%, #050505 55%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #444;
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: #bbb;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #999;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #aaa;
+            font-size: 19px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 16px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #dcdcdc;
+            transform: translateY(-2px);
+        }
+
+        /* TRUST */
+
+        .trust {
+            text-align: center;
+            padding: 25px 20px;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 46px;
+            line-height: 1.1;
+            margin-top: 12px;
+        }
+
+        .section-title p {
+            color: #999;
+            margin-top: 18px;
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #0e0e0e;
+            border: 1px solid #242424;
+            border-radius: 15px;
+            padding: 35px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #555;
+            transform: translateY(-5px);
+        }
+
+        .number {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #999;
+        }
+
+        /* WHY US */
+
+        .why {
+            background: #0b0b0b;
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .reason {
+            padding: 30px;
+            border-left: 1px solid #444;
+        }
+
+        .reason h3 {
+            margin-bottom: 10px;
+        }
+
+        .reason p {
+            color: #888;
+        }
+
+        /* PROCESS */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .step {
+            border-top: 1px solid #444;
+            padding-top: 25px;
+        }
+
+        .step strong {
+            display: block;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #888;
+            font-size: 15px;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background: white;
+            color: black;
+            border-radius: 20px;
+            margin: 80px 8%;
+            padding: 80px 30px;
+        }
+
+        .cta h2 {
+            font-size: 50px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .cta .button {
+            background: black;
+            color: white;
+        }
+
+        .cta .button:hover {
+            background: #222;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 40px 8%;
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 36px;
+            }
+
+            .cta {
+                margin: 40px 5%;
+                padding: 60px 20px;
+            }
+
+            .cta h2 {
+                font-size: 38px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">
+            DIGITAL <span>GROWTH</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#usluge">Usluge</a>
+            <a href="#proces">Kako radimo</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+                DIGITALNI MARKETING ZA MODERNA POSLOVANJA
+            </div>
+
+            <h1>
+                Vi vodite posao.<br>
+                <span>Mi dovodimo pažnju.</span>
+            </h1>
+
+            <p>
+                Pomažemo poslovanjima da se istaknu online,
+                dođu do novih potencijalnih kupaca i izgrade
+                snažniji digitalni nastup.
+            </p>
+
+            <a href="#kontakt" class="button">
+                Zatražite besplatnu analizu →
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- TRUST -->
+
+    <div class="trust">
+        STRATEGIJA • OGLAŠAVANJE • SADRŽAJ • WEB
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <section id="usluge">
+
+        <div class="section-title">
+            <small>Što radimo</small>
+
+            <h2>
+                Sve što vam treba za ozbiljniji nastup online.
+            </h2>
+
+            <p>
+                Ne stvaramo samo oglase. Gradimo sustav koji
+                vašem poslovanju pomaže privući pažnju i pretvoriti
+                zainteresirane ljude u potencijalne kupce.
+            </p>
+        </div>
+
+
+        <div class="services">
+
+            <div class="card">
+                <div class="number">01 / OGLAŠAVANJE</div>
+
+                <h3>Meta & Google Ads</h3>
+
+                <p>
+                    Kreiranje i optimizacija online kampanja
+                    usmjerenih prema ljudima koji bi mogli biti
+                    zainteresirani za vaše proizvode ili usluge.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="number">02 / DRUŠTVENE MREŽE</div>
+
+                <h3>Social Media</h3>
+
+                <p>
+                    Profesionalan sadržaj i komunikacija koji
+                    vašem brendu daju ozbiljniji i prepoznatljiv
+                    nastup na društvenim mrežama.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="number">03 / WEB</div>
+
+                <h3>Web stranice</h3>
+
+                <p>
+                    Moderne i responzivne web stranice koje jasno
+                    predstavljaju vašu ponudu i olakšavaju
+                    potencijalnim kupcima da vas kontaktiraju.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="number">04 / STRATEGIJA</div>
+
+                <h3>Digitalna strategija</h3>
+
+                <p>
+                    Pronalazimo što ima smisla za vaše poslovanje
+                    i kreiramo plan koji se može pratiti,
+                    testirati i poboljšavati.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+
+    <section class="why">
+
+        <div class="section-title">
+            <small>Zašto Digital Growth?</small>
+
+            <h2>
+                Ozbiljan pristup. Jasna komunikacija.
+            </h2>
+        </div>
+
+
+        <div class="reasons">
+
+            <div class="reason">
+                <h3>Jasna strategija</h3>
+
+                <p>
+                    Prije pokretanja kampanje definiramo cilj,
+                    publiku i način na koji ćemo mjeriti rezultate.
+                </p>
+            </div>
+
+
+            <div class="reason">
+                <h3>Transparentan rad</h3>
+
+                <p>
+                    Želimo da znate što se radi, zašto se radi
+                    i što se može poboljšati.
+                </p>
+            </div>
+
+
+            <div class="reason">
+                <h3>Fokus na poslovanje</h3>
+
+                <p>
+                    Lijep oglas nije dovoljan. Fokus stavljamo
+                    na ono što je važno vašem poslovanju.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+
+    <section id="proces">
+
+        <div class="section-title">
+            <small>Naš proces</small>
+
+            <h2>
+                Jednostavno od prve ideje do kampanje.
+            </h2>
+        </div>
+
+
+        <div class="process">
+
+            <div class="step">
+                <strong>01</strong>
+                <h3>Analiza</h3>
+                <p>
+                    Upoznajemo vaše poslovanje, ponudu i cilj.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <strong>02</strong>
+                <h3>Strategija</h3>
+                <p>
+                    Definiramo publiku, poruku i kanal oglašavanja.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <strong>03</strong>
+                <h3>Pokretanje</h3>
+                <p>
+                    Kreiramo sadržaj i pokrećemo kampanju.
+                </p>
+            </div>
+
+
+            <div class="step">
+                <strong>04</strong>
+                <h3>Optimizacija</h3>
+                <p>
+                    Pratimo podatke i poboljšavamo kampanju.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta" id="kontakt">
+
+        <h2>
+            Vrijeme je da vas<br>
+            više ljudi primijeti.
+        </h2>
+
+        <p>
+            Želite saznati gdje vaše poslovanje može napraviti
+            najveći digitalni iskorak? Javite nam se za
+            besplatnu početnu analizu.
+        </p>
+
+        <!-- OVDJE ĆEMO KASNIJE STAVITI TVOJ EMAIL -->
+
+        <a href="mailto:vasemail@example.com" class="button">
+            Zatražite besplatnu analizu →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            © 2026 Digital Growth
+        </div>
+
+        <div>
+            Digitalni marketing & web
+        </div>
+
+    </footer>
+
+</body>
+</html>
