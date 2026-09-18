@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Krečenje Zagreb | Zatražite ponudu</title>
+
+    <meta name="description"
+          content="Krečenje stanova, kuća i poslovnih prostora u Zagrebu i okolici. Zatražite ponudu.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAV */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #050505;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #777;
+        }
+
+        .nav-button {
+            background: white;
+            color: black;
+            padding: 12px 18px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #252525 0%,
+                    #090909 55%,
+                    #050505 100%
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #444;
+            border-radius: 50px;
+            padding: 8px 16px;
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 7vw, 78px);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #888;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #aaa;
+            font-size: 19px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 16px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #ddd;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-top: 12px;
+        }
+
+        .section-title p {
+            color: #999;
+            margin-top: 18px;
+            font-size: 17px;
+        }
+
+        /* USLUGE */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #0e0e0e;
+            border: 1px solid #242424;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #999;
+        }
+
+        /* PROCESS */
+
+        .process {
+            background: #0b0b0b;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .step {
+            border-top: 1px solid #444;
+            padding-top: 25px;
+        }
+
+        .step strong {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .step h3 {
+            margin: 12px 0 8px;
+        }
+
+        .step p {
+            color: #888;
+        }
+
+        /* KONTAKT */
+
+        .contact {
+            background: white;
+            color: black;
+            border-radius: 20px;
+            margin: 70px 8%;
+            padding: 70px 30px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 46px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .contact .button {
+            background: black;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 35px 8%;
+            color: #666;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 14px;
+        }
+
+        /* MOBITEL */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 18px 6%;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .cards,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 47px;
+                letter-spacing: -2px;
+            }
+
+            .section-title h2 {
+                font-size: 35px;
+            }
+
+            .contact {
+                margin: 40px 5%;
+                padding: 55px 20px;
+            }
+
+            .contact h2 {
+                font-size: 37px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGACIJA -->
+
+    <nav>
+
+        <div class="logo">
+            DIGITAL <span>GROWTH</span>
+        </div>
+
+        <a href="#kontakt" class="nav-button">
+            Zatražite ponudu
+        </a>
+
+    </nav>
+
+
+    <!-- GLAVNI DIO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="tag">
+                KREČENJE • ZAGREB I OKOLICA
+            </div>
+
+            <h1>
+                Trebate krečenje?<br>
+                <span>Zatražite ponudu.</span>
+            </h1>
+
+            <p>
+                Krečenje stanova, kuća i poslovnih prostora.
+                Pošaljite osnovne informacije o prostoru
+                i dogovorite daljnji korak.
+            </p>
+
+            <a href="#kontakt" class="button">
+                Pošalji upit →
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- USLUGE -->
+
+    <section>
+
+        <div class="section-title">
+
+            <small>Usluga</small>
+
+            <h2>
+                Krečenje za stanove, kuće i poslovne prostore.
+            </h2>
+
+            <p>
+                Cilj je jednostavan — dobiti osnovne informacije
+                o poslu i provjeriti mogućnost dogovora termina.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Stanovi i kuće</h3>
+
+                <p>
+                    Osvježavanje i krečenje stambenih prostora
+                    prema dogovorenom opsegu radova.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Poslovni prostori</h3>
+
+                <p>
+                    Krečenje i uređenje poslovnih prostora
+                    prema potrebama klijenta.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Zagreb i okolica</h3>
+
+                <p>
+                    Područje rada i dostupnost termina
+                    dogovaraju se prije početka radova.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCES -->
+
+    <section class="process">
+
+        <div class="section-title">
+
+            <small>Kako funkcionira</small>
+
+            <h2>
+                Od upita do dogovora.
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <strong>01 / UPIT</strong>
+
+                <h3>Pošaljete informacije</h3>
+
+                <p>
+                    Napišete lokaciju, približnu kvadraturu
+                    i što želite napraviti.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>02 / PROVJERA</strong>
+
+                <h3>Provjeravamo detalje</h3>
+
+                <p>
+                    Provjeravamo opis posla i dostupnost
+                    izvođača za traženi termin.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>03 / DOGOVOR</strong>
+
+                <h3>Dogovarate radove</h3>
+
+                <p>
+                    Ako postoji mogućnost realizacije,
+                    dogovaraju se termin i detalji posla.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAKT -->
+
+    <section class="contact" id="kontakt">
+
+        <h2>
+            Trebate krečenje?
+        </h2>
+
+        <p>
+            Pošaljite upit. Napišite lokaciju,
+            približnu kvadraturu i što treba napraviti.
+        </p>
+
+        <a
+            href="mailto:digitalgrowth1828@gmail.com?subject=Upit za krečenje"
+            class="button">
+            Pošalji upit →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            © 2026 Digital Growth
+        </div>
+
+        <div>
+            Krečenje • Zagreb i okolica
+        </div>
+
+    </footer>
+
+</body>
+</html>
