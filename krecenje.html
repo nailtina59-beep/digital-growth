@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Krečenje Zagreb | Zatražite ponudu</title>
+    <title>Krečenje Zagreb | Knauf | Zatražite ponudu</title>
 
     <meta name="description"
-          content="Krečenje stanova, kuća i poslovnih prostora u Zagrebu i okolici. Zatražite ponudu.">
+          content="Krečenje i knauf radovi u Zagrebu i okolici. Stanovi, kuće i poslovni prostori. Zatražite ponudu.">
 
     <style>
 
@@ -39,9 +39,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
+            padding: 18px 7%;
             background: #ffffff;
             border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
@@ -57,65 +60,66 @@
         .nav-button {
             background: #111111;
             color: #ffffff;
-            padding: 12px 18px;
+            padding: 12px 20px;
             border-radius: 7px;
             font-weight: bold;
+            transition: 0.2s;
         }
 
         .nav-button:hover {
             background: #333333;
         }
 
-        /* GLAVNI DIO */
+        /* HERO */
 
         .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
+            padding: 35px 6% 0;
+            background: #f5f5f5;
+        }
 
-            background: linear-gradient(
-                180deg,
-                #ffffff 0%,
-                #f7f7f7 100%
-            );
-
-            border-bottom: 1px solid #eeeeee;
+        .hero-image {
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
         }
 
         .hero-content {
-            max-width: 850px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 55px 20px 70px;
         }
 
         .tag {
             display: inline-block;
-            border: 1px solid #d8d8d8;
+            border: 1px solid #d5d5d5;
             border-radius: 50px;
-            padding: 8px 16px;
+            padding: 8px 17px;
             color: #555555;
             font-size: 12px;
             letter-spacing: 1px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: clamp(45px, 7vw, 78px);
+            font-size: clamp(40px, 6vw, 68px);
             line-height: 1.05;
             letter-spacing: -3px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h1 span {
             color: #555555;
         }
 
-        .hero p {
+        .hero-content p {
             max-width: 650px;
-            margin: 0 auto 30px;
+            margin: 0 auto 28px;
             color: #555555;
-            font-size: 19px;
+            font-size: 18px;
         }
 
         .button {
@@ -125,10 +129,12 @@
             padding: 16px 28px;
             border-radius: 8px;
             font-weight: bold;
+            transition: 0.2s;
         }
 
         .button:hover {
             background: #333333;
+            transform: translateY(-2px);
         }
 
         /* SEKCIJE */
@@ -138,7 +144,7 @@
         }
 
         .section-title {
-            max-width: 700px;
+            max-width: 750px;
             margin-bottom: 45px;
         }
 
@@ -172,17 +178,74 @@
             background: #ffffff;
             border: 1px solid #e2e2e2;
             border-radius: 15px;
-            padding: 30px;
+            padding: 32px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-number {
+            font-size: 13px;
+            color: #777777;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
 
         .card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
 
         .card p {
             color: #555555;
+        }
+
+        /* ISTAKNUTO */
+
+        .highlight {
+            background: #111111;
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 65px 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .highlight h2 {
+            font-size: 45px;
+            line-height: 1.1;
+        }
+
+        .highlight p {
+            color: #cccccc;
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+        .highlight-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .highlight-item {
+            border-bottom: 1px solid #444444;
+            padding-bottom: 15px;
+        }
+
+        .highlight-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .highlight-item span {
+            color: #aaaaaa;
+            font-size: 14px;
         }
 
         /* PROCES */
@@ -209,6 +272,7 @@
 
         .step h3 {
             margin: 12px 0 8px;
+            font-size: 22px;
         }
 
         .step p {
@@ -221,7 +285,7 @@
             background: #ffffff;
             color: #111111;
             border: 1px solid #e2e2e2;
-            border-radius: 16px;
+            border-radius: 18px;
             margin: 70px 8%;
             padding: 70px 30px;
             text-align: center;
@@ -229,13 +293,13 @@
         }
 
         .contact h2 {
-            font-size: 46px;
+            font-size: 48px;
             line-height: 1.1;
             margin-bottom: 15px;
         }
 
         .contact p {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 30px;
             color: #555555;
         }
@@ -254,7 +318,7 @@
             border-radius: 9px;
             font-weight: 700;
             box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            transition: 0.2s;
         }
 
         .whatsapp-button:hover {
@@ -264,7 +328,7 @@
 
         .phone {
             display: block;
-            margin-top: 12px;
+            margin-top: 16px;
             color: #555555;
             font-weight: 600;
         }
@@ -275,10 +339,8 @@
             border-top: 1px solid #e5e5e5;
             padding: 35px 8%;
             color: #666666;
-
             display: flex;
             justify-content: space-between;
-
             font-size: 14px;
         }
 
@@ -287,7 +349,33 @@
         @media (max-width: 800px) {
 
             nav {
-                padding: 18px 6%;
+                padding: 16px 5%;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .nav-button {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 15px 3% 0;
+            }
+
+            .hero-image {
+                border-radius: 10px;
+            }
+
+            .hero-content {
+                padding: 45px 15px 55px;
+            }
+
+            h1 {
+                font-size: 44px;
+                letter-spacing: -2px;
             }
 
             section {
@@ -299,12 +387,17 @@
                 grid-template-columns: 1fr;
             }
 
-            h1 {
-                font-size: 47px;
-                letter-spacing: -2px;
+            .section-title h2 {
+                font-size: 35px;
             }
 
-            .section-title h2 {
+            .highlight {
+                grid-template-columns: 1fr;
+                padding: 45px 28px;
+                gap: 35px;
+            }
+
+            .highlight h2 {
                 font-size: 35px;
             }
 
@@ -321,12 +414,6 @@
                 flex-direction: column;
                 gap: 10px;
             }
-
-            .nav-button {
-                padding: 10px 14px;
-                font-size: 14px;
-            }
-
         }
 
     </style>
@@ -339,34 +426,40 @@
     <nav>
 
         <div class="logo">
-            DIGITAL <span>GROWTH</span>
+            KREČENJE <span>ZAGREB</span>
         </div>
 
         <a href="#kontakt" class="nav-button">
-            Kontakt
+            Zatražite ponudu
         </a>
 
     </nav>
 
 
-    <!-- GLAVNI DIO -->
+    <!-- HERO -->
 
     <header class="hero">
+
+        <img
+            src="hero-krecenje-zagreb.png"
+            alt="Krečenje i knauf radovi u Zagrebu"
+            class="hero-image"
+        >
 
         <div class="hero-content">
 
             <div class="tag">
-                KREČENJE • ZAGREB I OKOLICA
+                KREČENJE • KNAUF • ZAGREB I OKOLICA
             </div>
 
             <h1>
-                Trebate krečenje?<br>
+                Uredite svoj prostor.<br>
                 <span>Zatražite ponudu.</span>
             </h1>
 
             <p>
-                Krečenje stanova, kuća i poslovnih prostora u Zagrebu i okolici.
-                Jednostavan dogovor, jasna komunikacija i uredno izvođenje radova.
+                Krečenje i knauf radovi za stanove, kuće i poslovne prostore
+                u Zagrebu i okolici.
             </p>
 
             <a href="#kontakt" class="button">
@@ -384,15 +477,15 @@
 
         <div class="section-title">
 
-            <small>Usluga</small>
+            <small>Naše usluge</small>
 
             <h2>
-                Krečenje za stanove, kuće i poslovne prostore.
+                Radovi za vaš prostor.
             </h2>
 
             <p>
-                Pošaljite osnovne informacije o prostoru
-                i dogovorite detalje radova.
+                Od krečenja do knauf radova — dogovorite što vam je potrebno
+                i zatražite ponudu.
             </p>
 
         </div>
@@ -402,10 +495,16 @@
 
             <div class="card">
 
-                <h3>Stanovi i kuće</h3>
+                <div class="card-number">
+                    01 / KREČENJE
+                </div>
+
+                <h3>
+                    Stanovi i kuće
+                </h3>
 
                 <p>
-                    Osvježavanje i krečenje stambenih prostora
+                    Krečenje i osvježavanje stambenih prostora
                     prema dogovorenom opsegu radova.
                 </p>
 
@@ -414,11 +513,17 @@
 
             <div class="card">
 
-                <h3>Poslovni prostori</h3>
+                <div class="card-number">
+                    02 / KNAUF
+                </div>
+
+                <h3>
+                    Knauf radovi
+                </h3>
 
                 <p>
-                    Krečenje i uređenje poslovnih prostora
-                    prema potrebama klijenta.
+                    Pregradni zidovi, spušteni stropovi,
+                    oblaganje i priprema površina.
                 </p>
 
             </div>
@@ -426,12 +531,85 @@
 
             <div class="card">
 
-                <h3>Zagreb i okolica</h3>
+                <div class="card-number">
+                    03 / POSLOVNI PROSTORI
+                </div>
+
+                <h3>
+                    Poslovni prostori
+                </h3>
 
                 <p>
-                    Termin i detalji radova dogovaraju se
-                    prije početka posla.
+                    Krečenje i uređenje poslovnih prostora
+                    prema potrebama i dogovoru.
                 </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ISTAKNUTO -->
+
+    <section>
+
+        <div class="highlight">
+
+            <div>
+
+                <h2>
+                    Jednostavno od prvog upita do dogovora.
+                </h2>
+
+                <p>
+                    Pošaljite osnovne informacije o prostoru
+                    i dogovorite detalje radova.
+                </p>
+
+            </div>
+
+
+            <div class="highlight-list">
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Zagreb i okolica
+                    </strong>
+
+                    <span>
+                        Radovi prema dogovoru i lokaciji.
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Krečenje i knauf
+                    </strong>
+
+                    <span>
+                        Usluge za stambene i poslovne prostore.
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-item">
+
+                    <strong>
+                        Zatražite ponudu
+                    </strong>
+
+                    <span>
+                        Pošaljite lokaciju i približnu kvadraturu.
+                    </span>
+
+                </div>
 
             </div>
 
@@ -459,9 +637,13 @@
 
             <div class="step">
 
-                <strong>01 / UPIT</strong>
+                <strong>
+                    01 / UPIT
+                </strong>
 
-                <h3>Pošaljete informacije</h3>
+                <h3>
+                    Pošaljete informacije
+                </h3>
 
                 <p>
                     Napišete lokaciju, približnu kvadraturu
@@ -473,13 +655,17 @@
 
             <div class="step">
 
-                <strong>02 / PROVJERA</strong>
+                <strong>
+                    02 / DOGOVOR
+                </strong>
 
-                <h3>Provjeravamo detalje</h3>
+                <h3>
+                    Provjeravamo detalje
+                </h3>
 
                 <p>
-                    Pregledamo opis posla i mogućnost
-                    dogovora termina.
+                    Pregledamo opis posla i dogovaramo
+                    mogućnost i termin izvođenja.
                 </p>
 
             </div>
@@ -487,13 +673,17 @@
 
             <div class="step">
 
-                <strong>03 / DOGOVOR</strong>
+                <strong>
+                    03 / RADOVI
+                </strong>
 
-                <h3>Dogovarate radove</h3>
+                <h3>
+                    Dogovarate izvedbu
+                </h3>
 
                 <p>
-                    Dogovaraju se termin i detalji
-                    potrebnih radova.
+                    Nakon dogovora definiraju se termin
+                    i potrebni radovi.
                 </p>
 
             </div>
@@ -513,22 +703,28 @@
 
         <p>
             Pošaljite nam lokaciju i približnu kvadraturu.
-            Brzo ćemo se javiti i dogovoriti detalje.
+            Javite se putem WhatsAppa ili telefona
+            kako bismo dogovorili detalje.
         </p>
+
 
         <a
             href="https://wa.me/385923837615?text=Pozdrav%2C%20zanima%20me%20kre%C4%8Denje%20u%20Zagrebu.%20Molim%20vas%20za%20ponudu.%20Lokacija%3A%20%20Kvadratura%3A%20"
             class="whatsapp-button"
             target="_blank"
-            rel="noopener">
+            rel="noopener"
+        >
             💬 Javite se na WhatsApp
         </a>
 
+
         <a
             href="tel:+385923837615"
-            class="phone">
+            class="phone"
+        >
             📞 +385 92 383 7615
         </a>
+
 
         <p style="margin-top:18px; margin-bottom:0; font-size:14px;">
             Ili nam pišite na digitalgrowth1828@gmail.com
@@ -542,14 +738,15 @@
     <footer>
 
         <div>
-            © 2026 Digital Growth
+            © 2026 Krečenje Zagreb
         </div>
 
         <div>
-            Krečenje • Zagreb i okolica
+            Krečenje • Knauf • Zagreb i okolica
         </div>
 
     </footer>
+
 
 </body>
 </html>
