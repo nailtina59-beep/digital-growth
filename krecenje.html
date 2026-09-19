@@ -23,8 +23,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #050505;
-            color: white;
+            background: #ffffff;
+            color: #111111;
             line-height: 1.6;
         }
 
@@ -33,15 +33,15 @@
             color: inherit;
         }
 
-        /* NAV */
+        /* NAVIGACIJA */
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: #050505;
-            border-bottom: 1px solid #222;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
         }
 
         .logo {
@@ -51,18 +51,22 @@
         }
 
         .logo span {
-            color: #777;
+            color: #666666;
         }
 
         .nav-button {
-            background: white;
-            color: black;
+            background: #111111;
+            color: #ffffff;
             padding: 12px 18px;
             border-radius: 7px;
             font-weight: bold;
         }
 
-        /* HERO */
+        .nav-button:hover {
+            background: #333333;
+        }
+
+        /* GLAVNI DIO */
 
         .hero {
             min-height: 80vh;
@@ -72,13 +76,13 @@
             text-align: center;
             padding: 80px 20px;
 
-            background:
-                radial-gradient(
-                    circle at center,
-                    #252525 0%,
-                    #090909 55%,
-                    #050505 100%
-                );
+            background: linear-gradient(
+                180deg,
+                #ffffff 0%,
+                #f7f7f7 100%
+            );
+
+            border-bottom: 1px solid #eeeeee;
         }
 
         .hero-content {
@@ -87,10 +91,10 @@
 
         .tag {
             display: inline-block;
-            border: 1px solid #444;
+            border: 1px solid #d8d8d8;
             border-radius: 50px;
             padding: 8px 16px;
-            color: #aaa;
+            color: #555555;
             font-size: 12px;
             letter-spacing: 1px;
             margin-bottom: 25px;
@@ -104,30 +108,30 @@
         }
 
         h1 span {
-            color: #888;
+            color: #555555;
         }
 
         .hero p {
             max-width: 650px;
             margin: 0 auto 30px;
-            color: #aaa;
+            color: #555555;
             font-size: 19px;
         }
 
         .button {
             display: inline-block;
-            background: white;
-            color: black;
+            background: #111111;
+            color: #ffffff;
             padding: 16px 28px;
             border-radius: 8px;
             font-weight: bold;
         }
 
         .button:hover {
-            background: #ddd;
+            background: #333333;
         }
 
-        /* SECTIONS */
+        /* SEKCIJE */
 
         section {
             padding: 90px 8%;
@@ -139,7 +143,7 @@
         }
 
         .section-title small {
-            color: #777;
+            color: #666666;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -151,7 +155,7 @@
         }
 
         .section-title p {
-            color: #999;
+            color: #555555;
             margin-top: 18px;
             font-size: 17px;
         }
@@ -165,10 +169,11 @@
         }
 
         .card {
-            background: #0e0e0e;
-            border: 1px solid #242424;
+            background: #ffffff;
+            border: 1px solid #e2e2e2;
             border-radius: 15px;
             padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
         }
 
         .card h3 {
@@ -177,13 +182,13 @@
         }
 
         .card p {
-            color: #999;
+            color: #555555;
         }
 
-        /* PROCESS */
+        /* PROCES */
 
         .process {
-            background: #0b0b0b;
+            background: #f7f7f7;
         }
 
         .steps {
@@ -193,12 +198,12 @@
         }
 
         .step {
-            border-top: 1px solid #444;
+            border-top: 2px solid #111111;
             padding-top: 25px;
         }
 
         .step strong {
-            color: #777;
+            color: #111111;
             font-size: 13px;
         }
 
@@ -207,18 +212,20 @@
         }
 
         .step p {
-            color: #888;
+            color: #555555;
         }
 
         /* KONTAKT */
 
         .contact {
-            background: white;
-            color: black;
-            border-radius: 20px;
+            background: #ffffff;
+            color: #111111;
+            border: 1px solid #e2e2e2;
+            border-radius: 16px;
             margin: 70px 8%;
             padding: 70px 30px;
             text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
 
         .contact h2 {
@@ -230,20 +237,44 @@
         .contact p {
             max-width: 600px;
             margin: 0 auto 30px;
-            color: #555;
+            color: #555555;
         }
 
-        .contact .button {
-            background: black;
-            color: white;
+        /* WHATSAPP */
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+            background: #25D366;
+            color: #ffffff;
+            padding: 15px 24px;
+            border-radius: 9px;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
+        .phone {
+            display: block;
+            margin-top: 12px;
+            color: #555555;
+            font-weight: 600;
         }
 
         /* FOOTER */
 
         footer {
-            border-top: 1px solid #222;
+            border-top: 1px solid #e5e5e5;
             padding: 35px 8%;
-            color: #666;
+            color: #666666;
 
             display: flex;
             justify-content: space-between;
@@ -291,6 +322,11 @@
                 gap: 10px;
             }
 
+            .nav-button {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+
         }
 
     </style>
@@ -307,7 +343,7 @@
         </div>
 
         <a href="#kontakt" class="nav-button">
-            Zatražite ponudu
+            Kontakt
         </a>
 
     </nav>
@@ -329,13 +365,12 @@
             </h1>
 
             <p>
-                Krečenje stanova, kuća i poslovnih prostora.
-                Pošaljite osnovne informacije o prostoru
-                i dogovorite daljnji korak.
+                Krečenje stanova, kuća i poslovnih prostora u Zagrebu i okolici.
+                Jednostavan dogovor, jasna komunikacija i uredno izvođenje radova.
             </p>
 
             <a href="#kontakt" class="button">
-                Pošalji upit →
+                Zatražite ponudu
             </a>
 
         </div>
@@ -356,8 +391,8 @@
             </h2>
 
             <p>
-                Cilj je jednostavan — dobiti osnovne informacije
-                o poslu i provjeriti mogućnost dogovora termina.
+                Pošaljite osnovne informacije o prostoru
+                i dogovorite detalje radova.
             </p>
 
         </div>
@@ -394,8 +429,8 @@
                 <h3>Zagreb i okolica</h3>
 
                 <p>
-                    Područje rada i dostupnost termina
-                    dogovaraju se prije početka radova.
+                    Termin i detalji radova dogovaraju se
+                    prije početka posla.
                 </p>
 
             </div>
@@ -443,8 +478,8 @@
                 <h3>Provjeravamo detalje</h3>
 
                 <p>
-                    Provjeravamo opis posla i dostupnost
-                    izvođača za traženi termin.
+                    Pregledamo opis posla i mogućnost
+                    dogovora termina.
                 </p>
 
             </div>
@@ -457,8 +492,8 @@
                 <h3>Dogovarate radove</h3>
 
                 <p>
-                    Ako postoji mogućnost realizacije,
-                    dogovaraju se termin i detalji posla.
+                    Dogovaraju se termin i detalji
+                    potrebnih radova.
                 </p>
 
             </div>
@@ -477,15 +512,27 @@
         </h2>
 
         <p>
-            Pošaljite upit. Napišite lokaciju,
-            približnu kvadraturu i što treba napraviti.
+            Pošaljite nam lokaciju i približnu kvadraturu.
+            Brzo ćemo se javiti i dogovoriti detalje.
         </p>
 
         <a
-            href="mailto:digitalgrowth1828@gmail.com?subject=Upit za krečenje"
-            class="button">
-            Pošalji upit →
+            href="https://wa.me/385923837615?text=Pozdrav%2C%20zanima%20me%20kre%C4%8Denje%20u%20Zagrebu.%20Molim%20vas%20za%20ponudu.%20Lokacija%3A%20%20Kvadratura%3A%20"
+            class="whatsapp-button"
+            target="_blank"
+            rel="noopener">
+            💬 Javite se na WhatsApp
         </a>
+
+        <a
+            href="tel:+385923837615"
+            class="phone">
+            📞 +385 92 383 7615
+        </a>
+
+        <p style="margin-top:18px; margin-bottom:0; font-size:14px;">
+            Ili nam pišite na digitalgrowth1828@gmail.com
+        </p>
 
     </section>
 
