@@ -73,24 +73,15 @@
         /* HERO */
 
         .hero {
-            padding: 35px 6% 0;
+            padding: 20px 6% 70px;
             background: #f5f5f5;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 1500px;
-            margin: auto;
-            display: block;
-            border-radius: 18px;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
         }
 
         .hero-content {
             text-align: center;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 55px 20px 70px;
+            padding: 55px 20px 45px;
         }
 
         .tag {
@@ -135,6 +126,15 @@
         .button:hover {
             background: #333333;
             transform: translateY(-2px);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
         }
 
         /* SEKCIJE */
@@ -204,6 +204,35 @@
             color: #555555;
         }
 
+        /* ZAŠTO NAS */
+
+        .why {
+            background: #f7f7f7;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .why-item strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .why-item p {
+            color: #555555;
+        }
+
         /* ISTAKNUTO */
 
         .highlight {
@@ -248,10 +277,29 @@
             font-size: 14px;
         }
 
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background: #f5f5f5;
+        }
+
+        .cta h2 {
+            font-size: 45px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #555555;
+        }
+
         /* PROCES */
 
         .process {
-            background: #f7f7f7;
+            background: #ffffff;
         }
 
         .steps {
@@ -362,15 +410,15 @@
             }
 
             .hero {
-                padding: 15px 3% 0;
+                padding: 10px 3% 45px;
+            }
+
+            .hero-content {
+                padding: 40px 15px 35px;
             }
 
             .hero-image {
                 border-radius: 10px;
-            }
-
-            .hero-content {
-                padding: 45px 15px 55px;
             }
 
             h1 {
@@ -383,7 +431,8 @@
             }
 
             .cards,
-            .steps {
+            .steps,
+            .why-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -398,6 +447,10 @@
             }
 
             .highlight h2 {
+                font-size: 35px;
+            }
+
+            .cta h2 {
                 font-size: 35px;
             }
 
@@ -440,12 +493,6 @@
 
     <header class="hero">
 
-        <img
-            src="ChatGPT Image 19. ruj 2026. 23_09_45.png"
-            alt="Krečenje i knauf radovi u Zagrebu"
-            class="hero-image"
-        >
-
         <div class="hero-content">
 
             <div class="tag">
@@ -467,6 +514,12 @@
             </a>
 
         </div>
+
+        <img
+            src="ChatGPT Image 19. ruj 2026. 23_09_45.png"
+            alt="Krečenje i knauf radovi u Zagrebu"
+            class="hero-image"
+        >
 
     </header>
 
@@ -551,6 +604,71 @@
     </section>
 
 
+    <!-- ZAŠTO NAS -->
+
+    <section class="why">
+
+        <div class="section-title">
+
+            <small>Jednostavno i jasno</small>
+
+            <h2>
+                Sve počinje jednim upitom.
+            </h2>
+
+            <p>
+                Pošaljite osnovne informacije o prostoru
+                i dogovorite sljedeći korak.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-item">
+
+                <strong>
+                    Zagreb i okolica
+                </strong>
+
+                <p>
+                    Radovi prema dogovoru i lokaciji.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <strong>
+                    Krečenje i knauf
+                </strong>
+
+                <p>
+                    Usluge za stambene i poslovne prostore.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <strong>
+                    Ponuda prema dogovoru
+                </strong>
+
+                <p>
+                    Pošaljite lokaciju i približnu kvadraturu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- ISTAKNUTO -->
 
     <section>
@@ -560,12 +678,12 @@
             <div>
 
                 <h2>
-                    Jednostavno od prvog upita do dogovora.
+                    Trebate urediti prostor?
                 </h2>
 
                 <p>
-                    Pošaljite osnovne informacije o prostoru
-                    i dogovorite detalje radova.
+                    Javite se i pošaljite osnovne informacije
+                    o poslu koji želite napraviti.
                 </p>
 
             </div>
@@ -576,11 +694,11 @@
                 <div class="highlight-item">
 
                     <strong>
+                        Lokacija
+                    </strong>
+
+                    <span>
                         Zagreb i okolica
-                    </strong>
-
-                    <span>
-                        Radovi prema dogovoru i lokaciji.
                     </span>
 
                 </div>
@@ -589,11 +707,11 @@
                 <div class="highlight-item">
 
                     <strong>
-                        Krečenje i knauf
+                        Usluga
                     </strong>
 
                     <span>
-                        Usluge za stambene i poslovne prostore.
+                        Krečenje ili knauf radovi
                     </span>
 
                 </div>
@@ -602,11 +720,11 @@
                 <div class="highlight-item">
 
                     <strong>
-                        Zatražite ponudu
+                        Informacije
                     </strong>
 
                     <span>
-                        Pošaljite lokaciju i približnu kvadraturu.
+                        Približna kvadratura i opis radova
                     </span>
 
                 </div>
@@ -614,6 +732,26 @@
             </div>
 
         </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            Imate prostor koji treba urediti?
+        </h2>
+
+        <p>
+            Pošaljite nam nekoliko osnovnih informacija
+            i javite se za dogovor.
+        </p>
+
+        <a href="#kontakt" class="button">
+            Zatražite ponudu →
+        </a>
 
     </section>
 
